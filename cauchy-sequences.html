@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cauchy Sequences | Real Sequence</title>
+  <link rel="stylesheet" href="real-sequence.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Real Sequence</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="real-sequence.html">Real Sequence</a></li>
+        <li><a href="convergent-sequence.html">Convergent Sequence</a></li>
+        <li><a href="divergent-sequence.html">Divergent Sequence</a></li>
+        <li><a href="oscillatory-sequence.html">Oscillatory Sequence</a></li>
+        <li><a  href="limit-points.html">Limit Points of a Sequence</a></li>
+        <li><a href="monotonic-sequences.html">Monotonic Sequences</a></li>
+        <li><a class="active" href="cauchy-sequences.html">Cauchy Sequences</a></li>
+      
+    </ul>
+  </nav>
+
+  <header class="header-content">
+    <h1>Cauchy Sequences</h1>
+    <p>Understanding sequences based on internal closeness rather than external limits</p>
+  </header>
+
+  <main class="content">
+    <div class="definition">
+        <h2>Definition</h2>
+        <p>
+          A sequence <code>{uₙ}</code> is said to be a <strong>Cauchy sequence</strong> if for every pre-assigned positive number <code>ε</code>, there exists a natural number <code>k</code> such that:
+          <br><code>|uₘ − uₙ| &lt; ε</code> for all <code>m, n ≥ k</code>.
+        </p>
+        <p>
+          Replacing <code>m</code> by <code>n + p</code> (for <code>p = 1, 2, 3, ...</code>), the condition can also be written as:
+          <br><code>|uₙ₊ₚ − uₙ| &lt; ε</code> for all <code>n ≥ k</code> and <code>p ∈ ℕ</code>.
+        </p>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.15.2:</h4>
+          <p><strong>A Cauchy sequence of real numbers is convergent.</strong></p>
+          <p><strong>Proof:</strong> Let <code>{uₙ}</code> be a Cauchy sequence.</p>
+          <ol>
+            <li>
+              First, we show that <code>{uₙ}</code> is bounded.<br>
+              Let <code>ε = 1</code>. Then, there exists a natural number <code>k</code> such that:<br>
+              <code>|uₘ − uₙ| &lt; 1</code> for all <code>m, n ≥ k</code>.<br>
+              In particular, <code>|uₙ − uₖ| &lt; 1</code> ⇒ <code>uₖ − 1 &lt; uₙ &lt; uₖ + 1</code> for all <code>n ≥ k</code>.
+            </li>
+            <li>
+              Let <code>B = max{u₁, u₂, ..., uₖ₋₁, uₖ + 1}</code><br>
+              and <code>A = min{u₁, u₂, ..., uₖ₋₁, uₖ − 1}</code>.<br>
+              Then <code>uₙ ∈ [A, B]</code> for all <code>n ∈ ℕ</code>. Hence, the sequence is bounded.
+            </li>
+            <li>
+              By the Bolzano-Weierstrass Theorem, a bounded sequence has a convergent subsequence.<br>
+              Let <code>I</code> be the limit of a convergent subsequence of <code>{uₙ}</code>.
+            </li>
+            <li>
+              We now prove that the entire sequence <code>{uₙ}</code> converges to <code>I</code>.<br>
+              Let <code>ε &gt; 0</code>. Since <code>{uₙ}</code> is Cauchy, there exists <code>k</code> such that:
+              <br><code>|uₘ − uₙ| &lt; ε</code> for all <code>m, n ≥ k</code>...(i)
+            </li>
+            <li>
+              Since <code>I</code> is a subsequential limit, there exists <code>q ≥ k</code> such that <code>u_q ≈ I</code>.<br>
+              From (i), we also have: <code>|uₙ − u_q| &lt; ε/2</code> and <code>|u_q − I| &lt; ε/2</code>.<br>
+              So: <code>|uₙ − I| ≤ |uₙ − u_q| + |u_q − I| &lt; ε</code> for all <code>n ≥ k</code>.
+            </li>
+          </ol>
+          <p>Therefore, <strong>lim uₙ = I</strong>, and the sequence <code>{uₙ}</code> is convergent.</p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.15.3:</h4>
+          <p><strong>A convergent sequence is a Cauchy sequence.</strong></p>
+          <p><strong>Proof:</strong> Let <code>{uₙ}</code> be a convergent sequence with <code>lim uₙ = I</code>. Let <code>ε &gt; 0</code>. Then there exists <code>k</code> such that:</p>
+          <ul>
+            <li><code>|uₙ − I| &lt; ε/2</code> for all <code>n ≥ k</code></li>
+            <li><code>|uₘ − I| &lt; ε/2</code> for all <code>m ≥ k</code></li>
+            <li>Then: <code>|uₙ − uₘ| ≤ |uₙ − I| + |uₘ − I| &lt; ε</code> for all <code>m, n ≥ k</code></li>
+          </ul>
+          <p>This proves that <code>{uₙ}</code> is a Cauchy sequence.</p>
+        </div>
+      </div>
+      
+
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+      <a href="monotonic-sequences.html" class="btn">← Previous</a>
+      <a href="index.html" class="btn">Back to Home →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Real Sequence. All rights reserved.</p>
+    <p>Developed by Pranit Mondal</p>
+  </footer>
+
+</body>
+</html>

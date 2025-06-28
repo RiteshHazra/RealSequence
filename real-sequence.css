@@ -1,0 +1,261 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #0b1120; /* dark navy background */
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111827; /* dark background */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #38bdf8; /* cyan accent */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #38bdf8;
+  }
+  
+  /* Header Content */
+  .header-content {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #38bdf8;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+  }
+  
+  /* Content Section */
+  .content {
+    background-color: #1e293b; /* dark slate background */
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(56,189,248,0.2);
+  }
+  
+  .content h2 {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 0.3rem;
+  }
+  
+  .content p,
+  .content li {
+    font-size: 1.05rem;
+    margin: 0.5rem 0;
+    color: #e2e8f0;
+  }
+  
+  .content ul {
+    padding-left: 1.2rem;
+    list-style: disc;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .btn:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #111827;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 3rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  
+    .header-content h1 {
+      font-size: 2rem;
+    }
+  
+    .content {
+      padding: 1rem;
+    }
+  }
+  
+  /* Definition Box */
+  .definition {
+    background-color: #172554;
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+  }
+  .definition h4 {
+    margin-bottom: 0.5rem;
+    color: #60a5fa;
+    font-size: 1.2rem;
+  }
+  
+  /* Theorem Box */
+  .theorem {
+    background-color: #14532d;
+    border-left: 4px solid #22c55e;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+  }
+  .theorem h4 {
+    margin-bottom: 0.5rem;
+    color: #4ade80;
+    font-size: 1.2rem;
+  }
+  
+  /* Example Box */
+  .example {
+    background-color: #134e4a;;
+    border-left: 4px solid #b1e4da;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+  }
+  .example h4 {
+    margin-bottom: 0.5rem;
+    color: #fde047;
+    font-size: 1.2rem;
+  }
+  
+  /* Note Box */
+  .note {
+    background-color: #7f1d1d;
+    border-left: 4px solid #f87171;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+  }
+  .note h4 {
+    margin-bottom: 0.5rem;
+    color: #fca5a5;
+    font-size: 1.2rem;
+  }
+  
+  /* Code Styling inside boxes */
+  .definition code,
+  .theorem code,
+  .example code,
+  .note code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    color: #f0f0f0;
+    font-family: monospace;
+  }
+  .toc li a {
+    text-decoration: none;
+    color: #e2edee;
+    font-weight: 500;
+  }
+  
+  .toc li a:hover {
+    color: #474242;
+    text-decoration: underline;
+  }
+
+  /* Nested Example Box */
+.nested-example {
+    background-color: rgba(44, 62, 80, 0.2); /* Slightly darker */
+    border-left: 4px dashed #f39c12; /* Orange dashed border */
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+  }
+  .nested-example h4 {
+    color: #f1c40f;
+    font-size: 1.1rem;
+  }
+  
+  /* Nested Theorem Box */
+  .nested-theorem {
+    background-color: rgba(39, 174, 96, 0.15);
+    border-left: 4px dashed #2ecc71;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+  }
+  .nested-theorem h4 {
+    color: #2ecc71;
+    font-size: 1.1rem;
+  }
+  
+  /* Nested Note Box */
+  .nested-note {
+    background-color: rgba(192, 57, 43, 0.15);
+    border-left: 4px dashed #e74c3c;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+  }
+  .nested-note h4 {
+    color: #e74c3c;
+    font-size: 1.1rem;
+  }
+  

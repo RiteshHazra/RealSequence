@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Sequence</title>
+    <link rel="stylesheet" href="real-sequence.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Real Sequence</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="real-sequence.html">Real Sequence</a></li>
+          <li><a href="convergent-sequence.html">Convergent Sequence</a></li>
+          <li><a href="divergent-sequence.html">Divergent Sequence</a></li>
+          <li><a href="oscillatory-sequence.html">Oscillatory Sequence</a></li>
+          <li><a href="limit-points.html">Limit Points of a Sequence</a></li>
+          <li><a href="monotonic-sequences.html">Monotonic Sequences</a></li>
+          <li><a href="cauchy-sequences.html">Cauchy Sequences</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>Real Sequence</h1>
+        <p>A fundamental topic in Real Analysis</p>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="definition">
+        <h2>Definition</h2>
+
+        <p>
+          A mapping <strong>f: N → R</strong> is said to be a
+          <strong>sequence in R</strong>, or a <strong>real sequence</strong>.
+          The values f(1), f(2), f(3), ... are real numbers. The image of the
+          nth element, f(n), is called the <strong>nth term</strong> of the real
+          sequence.
+        </p>
+
+        <p>
+          We shall be mainly concerned with real sequences, and unless otherwise
+          stated, the term <strong>sequence</strong> will refer to a
+          <strong>real sequence</strong>.
+        </p>
+
+        <p>
+          A sequence f is usually denoted by <code>{f(n)}</code>, or written as
+          <code>f(1), f(2), f(3), ...</code>.
+        </p>
+
+        <p>The set <code>{f(n) : n ∈ N}</code> is a subset of R.</p>
+
+        <p>
+          Symbols like <code>{uₙ}</code>, <code>{2n}</code>, <code>{1/n}</code>,
+          etc., are also used to denote a sequence.
+        </p>
+      </div>
+
+      <div class="example">
+        <h4>Examples:</h4>
+
+        <ul>
+          <div class="example">
+            <li>
+              <strong>Example 1:</strong> Let f: N → R be defined by f(n) = n, n
+              ∈ N.<br />
+              Then f(1) = 1, f(2) = 2, f(3) = 3, ...<br />
+              The sequence is denoted by <code>{1, 2, 3, ...}</code> or
+              <code>(n)</code>.
+            </li>
+          </div>
+          <div class="example">
+            <li>
+              <strong>Example 2:</strong> f(n) = n², n ∈ N<br />
+              The sequence is <code>{1, 4, 9, 16, ...}</code> or
+              <code>{n²}</code>.
+            </li>
+          </div>
+          <div class="example">
+            <li>
+              <strong>Example 3:</strong> f(n) = n / (n + 1), n ∈ N<br />
+              The sequence is <code>{1/2, 2/3, 3/4, 4/5, ...}</code>.
+            </li>
+          </div>
+          <div class="example">
+            <li>
+              <strong>Example 4:</strong> f(n) = (–1)^n, n ∈ N<br />
+              The sequence is <code>{–1, 1, –1, 1, ...}</code>.<br />
+              The range of the sequence is <code>{–1, 1}</code>.
+            </li>
+          </div>
+          <div class="example">
+            <li>
+              <strong>Example 5:</strong> f(n) = sin(nπ / 2), n ∈ N<br />
+              The sequence is <code>{1, 0, –1, 0, 1, 0, ...}</code>.<br />
+              The range is <code>{–1, 0, 1}</code>.
+            </li>
+          </div>
+          <div class="example">
+            <li>
+              <strong>Example 6:</strong> f(n) = 2 for all n ∈ N<br />
+              The sequence is <code>{2, 2, 2, ...}</code> — a
+              <strong>constant sequence</strong>.
+            </li>
+          </div>
+        </ul>
+      </div>
+      <p>
+        Sometimes, it is convenient to specify the initial term f(1), and then
+        define the sequence recursively in terms of f(n+1) for all n ≥ 1.
+      </p>
+
+      <div
+        style="display: flex; justify-content: space-between; margin-top: 30px"
+      >
+        <a href="index.html" class="btn">← Previous</a>
+        <a href="convergent-sequence.html" class="btn">Next →</a>
+      </div>
+    </section>
+
+    <footer>
+     <p>&copy; 2025 Real Sequence | Designed for BSc Math Honours Students</p> 
+     <p>Developed by Pranit Mondal</p>
+    </footer>
+  </body>
+</html>

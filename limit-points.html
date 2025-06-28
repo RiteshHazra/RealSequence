@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Limit Points | Real Sequence</title>
+  <link rel="stylesheet" href="real-sequence.css" />
+  
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Real Sequence</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="real-sequence.html">Real Sequence</a></li>
+        <li><a href="convergent-sequence.html">Convergent Sequence</a></li>
+        <li><a href="divergent-sequence.html">Divergent Sequence</a></li>
+        
+        <li><a class="active" href="limit-points.html">Limit Points of a Sequence</a></li>
+        <li><a href="monotonic-sequences.html">Monotonic Sequences</a></li>
+        <li><a href="cauchy-sequences.html">Cauchy Sequences</a></li>
+    </ul>
+  </nav>
+
+  <header class="header-content">
+    <h1>Limit Points of a Sequence</h1>
+    <p>Analyzing the values around which a sequence accumulates</p>
+  </header>
+
+  <main class="content">
+  <div class="defination">
+    <div class="definition">
+        <h4>Definition:</h4>
+        <p>
+          Let <code>{f(n)}</code> be a real sequence. A real number <code>l</code> is said to be the <strong>limit</strong> of the sequence if, for every positive number <code>ε</code>, there exists a natural number <code>k</code> such that:
+          <br><code>|f(n) - l| &lt; ε</code> for all <code>n ≥ k</code>.
+        </p>
+        <p>
+          In other words, except for the first <code>k</code> terms, all elements of the sequence lie within the ε-neighbourhood of <code>l</code>.
+        </p>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.3.1:</h4>
+          <p><strong>A sequence can have at most one limit.</strong></p>
+          <p>
+            Suppose <code>{f(n)}</code> has two limits <code>l₁</code> and <code>l₂</code>, where <code>l₁ ≠ l₂</code>.<br>
+            Let <code>ε = |l₁ - l₂| / 2</code>. Then the ε-neighbourhoods of <code>l₁</code> and <code>l₂</code> are disjoint.
+            Hence, a contradiction arises. Thus, a sequence can have only one limit.
+          </p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.5.1 (Limit Theorems):</h4>
+          <p>If <code>{uₙ}</code> → <code>u</code> and <code>{vₙ}</code> → <code>v</code>, then:</p>
+          <ul>
+            <li><strong>(i)</strong> <code>lim(uₙ + vₙ) = u + v</code></li>
+            <li><strong>(ii)</strong> For <code>c ∈ ℝ</code>, <code>lim(cuₙ) = cu</code></li>
+            <li><strong>(iii)</strong> <code>lim(uₙ vₙ) = uv</code></li>
+            <li><strong>(iv)</strong> <code>lim(uₙ / vₙ) = u / v</code> (if <code>vₙ ≠ 0</code> and <code>v ≠ 0</code>)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.5.2:</h4>
+          <p>If <code>{uₙ}</code> → <code>u</code>, then <code>{|uₙ|}</code> → <code>|u|</code>.</p>
+        </div>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> The converse is not necessarily true. For example, <code>uₙ = (−1)ⁿ</code> ⇒ <code>{|uₙ|} → 1</code> but <code>{uₙ}</code> does not converge.</p>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.5.3:</h4>
+          <p>If <code>{uₙ}</code> → <code>u</code> and <code>uₙ ≥ 0</code> for all <code>n ≥ m</code>, then <code>u ≥ 0</code>.</p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.5.4:</h4>
+          <p>If <code>{uₙ}</code> → <code>u</code>, <code>{vₙ}</code> → <code>v</code>, and <code>uₙ ≥ vₙ</code> for all <code>n ≥ m</code>, then <code>u ≥ v</code>.</p>
+        </div>
+      </div>
+      
+      <div class="definition">
+        <h4>Corollaries:</h4>
+        <ul>
+          <li>If <code>{xₙ}</code> → <code>c</code> and <code>xₙ ∈ [a, b]</code>, then <code>c ∈ [a, b]</code>.</li>
+          <li>If <code>{zₙ}</code> → <code>c</code> and <code>zₙ ∈ (a, b)</code>, then <code>c ∈ [a, b]</code>.</li>
+        </ul>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.5.5 (Sandwich Theorem):</h4>
+          <p>
+            Let <code>{uₙ}, {vₙ}, {wₙ}</code> be sequences such that <code>uₙ ≤ vₙ ≤ wₙ</code> for all <code>n ≥ m</code>. If <code>lim uₙ = lim wₙ = l</code>, then <code>lim vₙ = l</code>.
+          </p>
+        </div>
+      </div>
+      
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+      <a href="divergent-sequence.html" class="btn">← Previous</a>
+      <a href="monotonic-sequences.html" class="btn">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Real Sequence. All rights reserved.</p>
+    <p>Developed by Pranit Mondal</p>
+  </footer>
+
+</body>
+</html>

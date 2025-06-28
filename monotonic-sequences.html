@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monotonic Sequences | Real Sequence</title>
+  <link rel="stylesheet" href="real-sequence.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Real Sequence</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="real-sequence.html">Real Sequence</a></li>
+        <li><a href="convergent-sequence.html">Convergent Sequence</a></li>
+        <li><a href="divergent-sequence.html">Divergent Sequence</a></li>
+        
+        <li><a href="limit-points.html">Limit Points of a Sequence</a></li>
+        <li><a  class="active" href="monotonic-sequences.html">Monotonic Sequences</a></li>
+        <li><a href="cauchy-sequences.html">Cauchy Sequences</a></li>
+     
+    </ul>
+  </nav>
+
+  <header class="header-content">
+    <h1>Monotonic Sequences</h1>
+    <p>Sequences that follow a consistent increasing or decreasing pattern</p>
+  </header>
+
+  <main class="content">
+    <div class="definition">
+        <p>A real sequence <code>{f(n)}</code> is said to be:</p>
+        <ul>
+          <li><strong>Monotone Increasing</strong> if <code>f(n + 1) ≥ f(n)</code> for all <code>n ∈ ℕ</code>.</li>
+          <li><strong>Monotone Decreasing</strong> if <code>f(n + 1) ≤ f(n)</code> for all <code>n ∈ ℕ</code>.</li>
+          <li><strong>Monotone</strong> if it is either increasing or decreasing.</li>
+        </ul>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong></p>
+        <ul>
+          <li><code>f(n + 1) &gt; f(n)</code> for all <code>n</code> → <strong>Strictly Increasing</strong> sequence.</li>
+          <li><code>f(n + 1) &lt; f(n)</code> for all <code>n</code> → <strong>Strictly Decreasing</strong> sequence.</li>
+          <li>If <code>f(n + 1) ≥ f(n)</code> for all <code>n ≥ m</code>, the sequence is <strong>eventually increasing</strong>.</li>
+          <li>If <code>f(n + 1) ≤ f(n)</code> for all <code>n ≥ m</code>, the sequence is <strong>eventually decreasing</strong>.</li>
+        </ul>
+      </div>
+      
+      <div class="example">
+        <h4>Examples:</h4>
+        <ul>
+          <li class="nested-example"><strong>Example 1:</strong> <code>f(n) = 2ⁿ</code> is strictly increasing.</li>
+          <li class="nested-example"><strong>Example 2:</strong> <code>f(n) = 1/(n+1) + 1/(n+2) + ... + 1/(2n)</code> is strictly increasing, as its difference is positive.</li>
+          <li class="nested-example"><strong>Example 3:</strong> <code>f(n) = 1/n</code> is strictly decreasing.</li>
+          <li class="nested-example"><strong>Example 4:</strong> <code>f(n) = (−2)ⁿ</code> is neither increasing nor decreasing. Hence, not monotone.</li>
+        </ul>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.9.1:</h4>
+          <p><strong>A monotone increasing sequence bounded above is convergent</strong> and converges to its least upper bound.</p>
+          <p><strong>Proof:</strong> Let <code>{f(n)}</code> be monotone increasing and bounded above. Let <code>M</code> be its least upper bound.</p>
+          <ul>
+            <li>Then <code>f(n) ≤ M</code> for all <code>n</code>, and</li>
+            <li>For any ε > 0, there exists <code>k</code> such that <code>f(k) &gt; M − ε</code>.</li>
+            <li>Since <code>f(n)</code> is increasing, we get: <code>M − ε &lt; f(k) ≤ f(k + 1) ≤ ... ≤ M</code>.</li>
+          </ul>
+          <p>So <code>|f(n) − M| &lt; ε</code> for all <code>n ≥ k</code>. Thus, <strong>lim f(n) = M</strong>.</p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.9.2:</h4>
+          <p><strong>A monotone decreasing sequence bounded below is convergent</strong> and converges to its greatest lower bound.</p>
+          <p><em>Similar proof.</em></p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.9.3:</h4>
+          <p><strong>A monotone increasing sequence that is unbounded above diverges to ∞.</strong></p>
+          <p><strong>Proof:</strong> For any positive number <code>G</code>, however large, there exists <code>k</code> such that <code>f(k) &gt; G</code>. Since the sequence is increasing, <code>f(n) ≥ f(k) &gt; G</code> for all <code>n ≥ k</code>. Hence, <strong>lim f(n) = ∞</strong>.</p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.9.4:</h4>
+          <p><strong>A monotone decreasing sequence that is unbounded below diverges to −∞.</strong></p>
+          <p><em>Similar proof.</em></p>
+        </div>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> A monotone sequence has definite behaviour — it is either convergent or properly divergent.</p>
+      </div>
+      
+      <div class="definition">
+        <p>
+          The importance of these theorems lies in the fact that convergence of a monotone sequence can be established without knowing its limit in advance.
+          Once boundedness is confirmed, the limit can be identified as the least upper bound (for increasing) or greatest lower bound (for decreasing).
+        </p>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.9.5 (Cantor’s Theorem on Nested Intervals):</h4>
+          <p>Let <code>{[aₙ, bₙ]}</code> be a sequence of closed and bounded intervals such that:</p>
+          <ul>
+            <li>(i) <code>[aₙ₊₁, bₙ₊₁] ⊆ [aₙ, bₙ]</code> for all <code>n ∈ ℕ</code>.</li>
+            <li>(ii) The length <code>δₙ = bₙ − aₙ → 0</code> as <code>n → ∞</code>.</li>
+          </ul>
+          <p>Then, the intersection <code>⋂[aₙ, bₙ]</code> contains exactly one point.</p>
+          <p><strong>Proof Sketch:</strong></p>
+          <ul>
+            <li><code>{aₙ}</code> is monotone increasing and bounded above → convergent.</li>
+            <li><code>{bₙ}</code> is monotone decreasing and bounded below → convergent.</li>
+            <li>Let <code>lim aₙ = lim bₙ = α</code>. Then, <code>α</code> is the only point in <code>⋂[aₙ, bₙ]</code>.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> A nested sequence of open intervals <code>(Iₙ)</code> may not have a non-empty intersection.</p>
+        <p>Example: <code>Iₙ = (0, 1/n)</code> ⇒ <code>⋂ Iₙ = ∅</code></p>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> A nested sequence of closed but unbounded intervals <code>Iₙ = [n, ∞)</code> may also have an empty intersection.</p>
+        <p>Example: <code>⋂ [n, ∞) = ∅</code></p>
+      </div>
+      
+
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+      <a href="limit-points.html" class="btn">← Previous</a>
+      <a href="cauchy-sequences.html" class="btn">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Real Sequence. All rights reserved.</p>
+    <p>Developed by Pranit Mondal</p>
+  </footer>
+
+</body>
+</html>

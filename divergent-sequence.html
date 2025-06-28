@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divergent Sequence | Real Sequence</title>
+  <link rel="stylesheet" href="real-sequence.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Real Sequence</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="real-sequence.html">Real Sequence</a></li>
+        <li><a href="convergent-sequence.html">Convergent Sequence</a></li>
+        <li><a class="active" href="divergent-sequence.html">Divergent Sequence</a></li>
+       
+        <li><a href="limit-points.html">Limit Points of a Sequence</a></li>
+        <li><a href="monotonic-sequences.html">Monotonic Sequences</a></li>
+        <li><a href="cauchy-sequences.html">Cauchy Sequences</a></li>
+    </ul>
+  </nav>
+
+  <header class="header-content">
+    <h1>Divergent Sequence</h1>
+    <p>Understanding sequences that grow without bounds</p>
+  </header>
+
+  <main class="content">
+    <div class="definition">
+        <p>
+          A real sequence <code>{f(n)}</code> is said to <strong>diverge to ∞</strong> if, for every pre-assigned positive number <code>G</code> (however large), there exists a natural number <code>k</code> such that:
+          <br><code>f(n) &gt; G</code> for all <code>n ≥ k</code>.
+        </p>
+        <p>
+          In this case, we write: <strong>lim f(n) = ∞</strong> and say that the sequence <code>{f(n)}</code> tends to ∞.
+        </p>
+      
+        <p>
+          A real sequence <code>{f(n)}</code> is said to <strong>diverge to −∞</strong> if, for every pre-assigned positive number <code>G</code>, there exists a natural number <code>k</code> such that:
+          <br><code>f(n) &lt; −G</code> for all <code>n ≥ k</code>.
+        </p>
+        <p>
+          In this case, we write: <strong>lim f(n) = −∞</strong> and say that the sequence <code>{f(n)}</code> tends to −∞.
+        </p>
+      
+        <p>
+          A real sequence <code>{f(n)}</code> is called a <strong>properly divergent sequence</strong> if it either diverges to ∞ or diverges to −∞.
+        </p>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.7.1:</h4>
+          <p><strong>A sequence diverging to ∞ is unbounded above but bounded below.</strong></p>
+          <p>
+            Let the sequence <code>{f(n)}</code> diverge to ∞. Then for every pre-assigned positive number <code>G</code>, there exists a natural number <code>k</code> such that <code>f(k) &gt; G</code>.
+          </p>
+          <p>
+            Therefore, there does not exist a real number <code>B</code> such that <code>f(n) ≤ B</code> for all <code>n ∈ N</code>.<br>
+            Thus, the sequence is <strong>unbounded above</strong>.
+          </p>
+          <p>
+            Let <code>G &gt; 0</code>. Then there exists <code>k</code> such that <code>f(n) &gt; G</code> for all <code>n ≥ k</code>.<br>
+            Define <code>b = min{f(1), f(2), ..., f(k−1), G}</code>. Then <code>f(n) ≥ b</code> for all <code>n ∈ N</code>.
+          </p>
+          <p>
+            This proves that <code>{f(n)}</code> is <strong>bounded below</strong>.
+          </p>
+        </div>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> A sequence that is unbounded above but bounded below may not necessarily diverge to ∞.</p>
+      </div>
+      
+      <div class="example">
+        <div class="nested-example">
+          <p>
+            <strong>Example:</strong> Consider the sequence <code>f(n) = n(−1)^n</code>.<br>
+            The sequence is <code>{−1, 2, −3, 4, −5, 6, ...}</code>. It is unbounded above and bounded below (0 is a lower bound), but it does not diverge to ∞, since <code>f(n) &gt; G</code> does not hold for all <code>n ≥ k</code>.
+          </p>
+        </div>
+      </div>
+      
+      <div class="theorem">
+        <div class="nested-theorem">
+          <h4>Theorem 5.7.2:</h4>
+          <p><strong>A sequence diverging to −∞ is unbounded below but bounded above.</strong></p>
+          <p><em>Proof left to the reader.</em></p>
+        </div>
+      </div>
+      
+      <div class="note">
+        <p><strong>Note:</strong> A sequence unbounded below but bounded above may not diverge to −∞.</p>
+      </div>
+      
+      <div class="definition">
+        <h4>Definitions:</h4>
+        <ul>
+          <li>
+            A <strong>bounded sequence</strong> that is not convergent is called an <strong>oscillatory sequence of finite oscillation</strong>.
+          </li>
+          <li>
+            An <strong>unbounded sequence</strong> that is not properly divergent is called an <strong>oscillatory sequence of infinite oscillation</strong>.
+          </li>
+          <li>
+            An <strong>oscillatory sequence</strong> is neither convergent nor properly divergent.<br>
+            It is also known as an <strong>improperly divergent sequence</strong>.
+          </li>
+        </ul>
+      </div>
+      
+      <div class="example">
+        <h4>Examples:</h4>
+        <div class="nested-example">
+          <p><strong>Example 1:</strong> The sequence <code>{n}</code> diverges to ∞.</p>
+        </div>
+        <div class="nested-example">
+          <p><strong>Example 2:</strong> The sequence <code>{−n²}</code> diverges to −∞.</p>
+        </div>
+        <div class="nested-example">
+          <p><strong>Example 3:</strong> The sequence <code>{(−1)^n}</code> is bounded but not convergent — an oscillatory sequence of <strong>finite oscillation</strong>.</p>
+        </div>
+        <div class="nested-example">
+          <p><strong>Example 4:</strong> The sequence <code>{(−1)^n * n}</code> is unbounded and not properly divergent — an oscillatory sequence of <strong>infinite oscillation</strong>.</p>
+        </div>
+      </div>
+      
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+      <a href="convergent-sequence.html" class="btn">← Previous</a>
+      <a href="limit-points.html" class="btn">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Real Sequence. All rights reserved.</p>
+    <p>Developed by Pranit Mondal</p>
+  </footer>
+
+</body>
+</html>
